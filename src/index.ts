@@ -21,7 +21,7 @@ class TodoList{
     this.todos.push(newTodo);
   }
   
-  // completeTodo it marks a task as complete
+  // This finds the task and marks it as done
   completeTodo(id: number): void {
     const todo = this.todos.find((todo) => todo.id === id);
     if (todo) {
@@ -41,12 +41,12 @@ class TodoList{
     }
   }
   
-  // Displays the todo list
+  // This displays the todo list
   listTodos(): TodoItem[] {
     return this.todos;
   }
   
-  // filters completed task
+  //This filters completed task
   filterTodos(completed: boolean): TodoItem[] {
     return this.todos.filter((todo) => todo.completed === completed);
   }
